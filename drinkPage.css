@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black; 
+}
+header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+header input{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: larger;
+    border: 3px solid white;
+    border-color: white;
+}
+header h1{
+    color: white;
+    letter-spacing: 2px;
+}
+.cards{
+    display: flex;
+    flex-direction:row ;
+    gap: 3rem;
+    padding: 10px;
+}
+.cardOne{
+    position: relative;
+    padding: 2px;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+.name{
+    position:absolute;
+    background-color: black;
+    bottom:-15px;
+    right:-15px;
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    border:3px solid white;
+    font-size: 30px;
+    font-weight: bolder;
+
+}

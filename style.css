@@ -60,9 +60,15 @@ img{
     padding-right: 30px;
 }
 .footer a {
-    color:black
+    color:rgb(69, 11, 230);
+    margin: 20px;
+
 }
 .footer {
     background-color: beige;
     height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
 }
