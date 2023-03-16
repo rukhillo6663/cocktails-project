@@ -41,13 +41,18 @@ img{
 }
 .about-us-text{
     margin: 20px;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow:  5px 5px 50px rgb(68, 68, 194) inset;
 }
 .about-header{
     text-align: center;
 }
 .contact-header{
     text-align: center;
-    margin-bottom: 30px;
+    margin: 30px 0px;
+    
 }
 .contact-us-content{
     display: flex;
@@ -58,6 +63,24 @@ img{
     display: flex;
     flex-direction: column;
     padding-right: 30px;
+    
+}
+.form input, .form button, textarea{
+    background-color: white;
+    color: black;
+    font-size: larger;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 7px;
+    margin: 5px;
+    background-color:lightblue;
+}
+textarea{
+    resize: none;
+}
+iframe{
+    border-radius: 15px;
 }
 .footer a {
     color:rgb(69, 11, 230);
@@ -65,7 +88,7 @@ img{
 
 }
 .footer {
-    background-color: beige;
+    background-color: lightgray;
     height: 100px;
     display: flex;
     flex-direction: row;

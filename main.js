@@ -4,31 +4,43 @@ const search = document.querySelector('input');
 
 
 const drinksData = data();
-const result =drinksData.forEach((card) => {
+const result =drinksData.forEach((card, index) => {
 
-  const div = document.createElement('div');
-  div.className = 'card';
+  const div  = document.createElement('div');
+  div.className = `card card${index}`;
   cards.appendChild(div)
   const image =document.createElement('img');
   image.src = card.strDrinkThumb 
-  image.style.width = "100%";
-  image.style.height = '100%';
   div.appendChild(image)
   const title = document.createElement('div');
   title.className = 'title';
   title.innerHTML = card.strDrink
   div.appendChild(title);
-    
+ 
+
 })
+//filter search event listerner added
 
-
-search.addEventListener("keyup", (event)=>{
-    drinksData.forEach((item) =>{
-        const value = search.value.toLowerCase();
-        const compareValue = (item.strDrink).toLowerCase();
-        if(compareValue.includes(value)){
-            //console.log(value)
+let cardList =(document.querySelectorAll('.title'));
+let arrayTitles = Array.from(cardList) 
+ search.addEventListener('keyup',()=>{
+    let value = search.value.toUpperCase();
+    
+    arrayTitles.forEach((item)=>{
+        let itemName = (item.innerHTML).toUpperCase()
+        if(itemName.includes(value)){
+            item.parentElement.style.display = 'block'
+        } else {
+            item.parentElement.style.display = 'none'
         }
     })
-})
+    item.parentElement.style.display = 'block'
+ })
+    
+    
+   
+    
+
+
+
     
