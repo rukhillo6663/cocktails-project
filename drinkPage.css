@@ -5,6 +5,7 @@
 }
 body{
     background-color: black; 
+    padding-bottom: 100px;
 }
 header{
     display: flex;
@@ -29,21 +30,23 @@ header h1{
 .cards{
     display: flex;
     flex-direction:row ;
-    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
     padding: 10px;
 }
-.cardOne{
+.card{
     position: relative;
     padding: 2px;
     border-radius: 10px;
     border: 3px solid white;
 }
-.name{
+.title{
     position:absolute;
     background-color: black;
     bottom:-15px;
     right:-15px;
-    width: 30%;
+    
     padding: 10px;
     border-radius: 10px;
     color: white;
