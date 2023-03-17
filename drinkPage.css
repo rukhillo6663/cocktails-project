@@ -4,41 +4,57 @@
     box-sizing: border-box;
 }
 body{
-    background-color: black; 
+    background-color: rgb(7, 6, 6); 
     padding-bottom: 100px;
 }
+/*Header styling*/
 header{
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    flex-direction: column;
-    padding: 10px;
+    flex-direction: row;
+    padding: 20px;
+    margin: 20px;
 }
-header input{
+.header-content input,header select, header .btn-box button{
     background-color: black;
     color: white;
     padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+    margin:  10px;
+    border-radius: 10px;
     font-size: larger;
     border: 3px solid white;
     border-color: white;
+
 }
-header h1{
+
+select:hover, .btn-box button:hover{
+    background-color: #585757;
+    cursor: pointer;
+}
+.btn-box button:focus{
+    background-color:rgb(224, 215, 215);
+    color: black;
+    cursor: pointer;
+}
+.header-content h1{
     color: white;
+    padding-left:10px ;
     letter-spacing: 2px;
 }
+/*Card-main section styling*/
 .cards{
     display: flex;
     flex-direction:row ;
     justify-content: center;
     flex-wrap: wrap;
     gap: 100px;
-    padding: 20px;
+    padding: 10px;
 }
 .card{
     position: relative;
     padding: 2px;
-    height: 360px;
+    height: 300px;
     border-radius: 10px;
     border: 3px solid white;
     width: 25%;
@@ -49,7 +65,7 @@ header h1{
 }
 .card:hover, .card:focus{
     cursor: pointer;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 .title{
     position:absolute;
@@ -63,18 +79,16 @@ header h1{
     border:3px solid white;
     font-size: 30px;
     font-weight: bolder;
+
 }
 /*Modul content and modul item styling*/
 .module{
-    background-color:rgba(230, 215, 215, 0.8);
+    background-color:#ccc;
     position: fixed;
     z-index: 1;
-    left: 0;
-    top: 0;
     display:none;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
+    width: 100vw;
+    height: 100vh;
     opacity: 0.95;
     backdrop-filter: blur(10px);
 
@@ -82,19 +96,12 @@ header h1{
 .module-item{
     margin: 30% auto; 
     width: 70%;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),0 7px 20px 0 rgba(0, 0, 0, 0.18);
     bottom:50%;
     height: 250px;
-    background-color:black;
+    background-color: black;
     position: relative;
-    padding: 20%;
-}
-.closeBtn{
-    color: #ccc;
-    float: right;
-    font-size: 30px;
     
-
+    padding: 20%;
 }
 .module-item img{
     position: absolute;

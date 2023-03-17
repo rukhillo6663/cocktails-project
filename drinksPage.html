@@ -16,9 +16,28 @@
         </div>
             
     </div>
-    <header> 
-    <h1 style="padding-top:20px">Cocktail Menu </h1>
-    <input type="search" placeholder="Search your cocktail ..."/>
+    <!-- Header-->
+    <header>
+        <select name="" id="category">
+            <option value="">All</option>
+            <option value="Cocktail">Cocktail</option>
+            <option value="Shot">Shot</option>
+            <option value="Ordinary Drink">Ordinary Drink</option>
+            <option value="Coffee / Tea">Cofee/Tea</option>
+            <option value="Other/Unknown">Others/Unknown</option>
+        </select>
+        <!--Search input -->>
+        <div class="header-content">
+            <h1 style="padding-top:20px">Cocktail Menu </h1>
+            <input type="search" placeholder="Search your cocktail ..."/>
+        </div> 
+        <!--Button -->>
+        <div class="btn-box">
+            <button type="button" id="alcoholic"  value="Alcoholic">Alcoholic</button>
+            <button type="Non Alcoholic" id="nonAlcoholic">Non Alcoholic</button>
+            <button type="reset" id="clear">Clear</button>
+        </div>
+   
 
     </header>
     <main>
