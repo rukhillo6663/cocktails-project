@@ -14,11 +14,12 @@ function showDrinksOnUI(datas){
 
 
     const div  = document.createElement('div');
-    div.className = `card`;
+    div.className = `card ${card.strDrink}`;
     cards.appendChild(div)
     const image =document.createElement('img');
     image.src = card.strDrinkThumb 
-    div.appendChild(image)
+    image.className = 'image';
+    div.appendChild(image);
     const title = document.createElement('div');
     title.className = 'title';
     title.innerHTML = card.strDrink
@@ -113,10 +114,9 @@ select.addEventListener('input',(event)=>{
   console.log(filteredDrinks);
   clear();
   showDrinksOnUI(filteredDrinks);
-  showDrinksOnUI(drinksData);
+  
   
 })
-
 
 /*********************************************/
 //Clear All function 
@@ -134,6 +134,55 @@ nonAlcoholicBtn.addEventListener('click', nonAlcoholClick);
 clearBtn.addEventListener('click',clearIt);
 
 
+
+//Modal Window test
+const modalContainer = document.querySelector('.modal-container');
+const closeBtn = document.createElement('span');
+const cardList2 = document.querySelectorAll('.card');
+const cardList = Array.from(cardList2);
+function clearModal() {
+  while (modalContainer.firstChild) {
+      modalContainer.removeChild(modalContainer.firstChild)
+  }
+}
+
+cardList.forEach((tab, index)=>{
+  tab.addEventListener('click',(event)=>{
+    
+    let clonedObject = { ...drinksData[index] }
+    clearModal()
+    
+  
+    const modalItem = document.createElement('div');
+    modalItem.className = 'modal-item ';
+    const leftBox = document.createElement('div');
+    leftBox.className = 'left-box'
+    const image =document.createElement('img');
+    
+    image.src = clonedObject.strDrinkThumb;
+    image.className = 'modal-image';
+    leftBox.appendChild(image)
+    const rightBox = document.createElement('div');
+    rightBox.className = 'right-box';
+    rightBox.appendChild(document.createTextNode(`1)Instruction: ${clonedObject.strInstructions}`));
+    
+    modalItem.appendChild(leftBox);
+    modalItem.appendChild(rightBox);
+    
+    modalContainer.style.display = 'block';
+    modalContainer.appendChild(modalItem)
+    
+    /*modalItem.appendChild(image)*/
+      
+      console.log( modalContainer, clonedObject);
+  })
+  
+})
+window.addEventListener('click', (event)=>{
+  if(event.target === modalContainer){
+    modalContainer.style.display = 'none'
+  }
+})
   
     
    
